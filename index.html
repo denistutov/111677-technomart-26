@@ -38,16 +38,14 @@
         <h1 class="site-descr">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
 
         <div class="menu-contacts">
-          <button class="menu-contacts__tel">
-            +7 (812) 555-05-55
-          </button>
+          <a href="tel:+78125550555" class="menu-contacts__tel">+7 (812) 555-05-55</a>
           <span class="menu-contacts__arddress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </div>
 
-        <div class="menu-userprofile">
+        <nav class="userprofile-nav">
           <a href="" class="menu-userprofile__btn menu-userprofile__login">Войти</a>
           <a href="" class="menu-userprofile__btn menu-userprofile__login">Регистрация</a>
-        </div>
+        </nav>
       </div>
 
       <nav class="page-navigation">
@@ -80,52 +78,52 @@
     <main>
       <section class="main-section offers">
         <h2 class="offers-title">Предложенрия интернет-магазина</h2>
-        <article class="offers-item offers-material offers-item-new">
-          <h3 class="catalog-item-title">Материалы</h3>
-          <a href="" class="offers-btn">На любой вкус</a>
-        </article>
-        <article class="offers-item offers-instrument">
-          <h3 class="catalog-item-title">Инструмент</h3>
-          <a href="" class="offers-btn">На все случаи</a>
-        </article>
-        <article class="offers-item offers-tech">
-          <h3 class="catalog-item-title">Техника</h3>
-          <a href="" class="offers-btn">Для стройки</a>
-        </article>
-        <article class="offers-item offers-dicount">
-          <h3 class="catalog-item-title">Скидки 50%</h3>
-          <a href="" class="offers-btn">На 350 товаров</a>
-        </article>
-        <article class="offers-item offers-delivery">
-          <h3 class="catalog-item-title">Доставка</h3>
-          <a href="" class="offers-btn">Бесплатно</a>
-        </article>
-
-        <div class="main-section page-slider">
-          <div class="slider-inner">
-            <div class="slider-block slider-1">
-              <div class="slider-content">
-                <span class="slider-title">Перфораторы</span>
-                <span class="slider-descr">Настоящие мужские игрушки</span>
-                <a href="" class="button slider-btn">Открыть каталог</a>
+        <ul class="offers-items">
+          <li class="offers-item  offers-material offers-item-new">
+            <h3 class="catalog-item-title">Материалы</h3>
+            <a href="" class="offers-btn">На любой вкус</a>
+          </li>
+          <li class="offers-item offers-instrument">
+            <h3 class="catalog-item-title">Инструмент</h3>
+            <a href="" class="offers-btn">На все случаи</a>
+          </li>
+          <li class="offers-item offers-tech">
+            <h3 class="catalog-item-title">Техника</h3>
+            <a href="" class="offers-btn">Для стройки</a>
+          </li>
+          <li class="offers-item offers-dicount">
+            <h3 class="catalog-item-title">Скидки 50%</h3>
+            <a href="" class="offers-btn">На 350 товаров</a>
+          </li>
+          <li class="offers-item offers-delivery">
+            <h3 class="catalog-item-title">Доставка</h3>
+            <a href="" class="offers-btn">Бесплатно</a>
+          </li>
+          <li class="page-slider">
+            <div class="slider-inner">
+              <div class="slider-block slider-1">
+                <div class="slider-content">
+                  <span class="slider-title">Перфораторы</span>
+                  <span class="slider-descr">Настоящие мужские игрушки</span>
+                  <a href="" class="button slider-btn">Открыть каталог</a>
+                </div>
+                <div class="slider-image">
+                  <img class="slider-image__image" src="https://via.placeholder.com/620x265" width="620" height="265" alt="Перфораторы">
+                </div>
               </div>
-              <div class="slider-image">
-                <img class="slider-image__image" src="https://via.placeholder.com/620x265" width="620" height="265" alt="Перфораторы">
+              <div class="slider-block slider-2">
+                <div class="slider-content">
+                  <span class="slider-title">Дрели</span>
+                  <span class="slider-descr">Соседям на радость!</span>
+                  <a href="" class="button slider-btn">Открыть каталог</a>
+                </div>
+                <div class="slider-image">
+                  <img class="slider-image__image" src="https://via.placeholder.com/620x265" width="620" height="265" alt="Дрели">
+                </div>
               </div>
-            </div>
-            <div class="slider-block slider-2">
-              <div class="slider-content">
-                <span class="slider-title">Дрели</span>
-                <span class="slider-descr">Соседям на радость!</span>
-                <a href="" class="button slider-btn">Открыть каталог</a>
-              </div>
-              <div class="slider-image">
-                <img class="slider-image__image" src="https://via.placeholder.com/620x265" width="620" height="265" alt="Дрели">
-              </div>
-            </div>
-          </div>
+            </li>
+        </ul>
       </section>
-
 
       <section class="main-section popular">
         <h2 class="popular-title">Популярные товары магазина.</h2>
@@ -299,15 +297,9 @@
             Техномарт работает со многими транспортными компаниями:</p>
         </div>
         <ul class="information-partners">
-          <li class="information-partners__item">
-            <span>Деловые Линии</span>
-          </li>
-          <li class="information-partners__item">
-            <span>Автотрейдинг</span>
-          </li>
-          <li class="information-partners__item">
-            <span>ЖелДорЭкспедиция</span>
-          </li>
+          <li class="information-partners__item">Деловые Линии</li>
+          <li class="information-partners__item">Автотрейдинг</li>
+          <li class="information-partners__item">ЖелДорЭкспедиция</li>
         </ul>
         <a href="" class="button about-btn">Подробнее о компании</a>
         <aside class="contacts">
