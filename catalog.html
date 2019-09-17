@@ -27,7 +27,7 @@
               <a class="client-navigation__btn client-navigation__marker" href="">Закладки: <span>0</span></a>
             </li>
             <li class="client-navigation__item">
-              <a class="client-navigation__btn client-navigation__cart" href="">Корзина <span>0</span></a>
+              <a class="client-navigation__btn client-navigation__cart not-empty" href="">Корзина <span>10</span></a>
             </li>
             <li class="client-navigation__item">
               <a class="client-navigation__btn client-navigation__order" href="">Оформить заказ</a>
@@ -95,9 +95,51 @@
         </ul>
       </div>
 
+      <div class="catalog-sort-menu">
+        <div class="sort-buttons-wrapper">
+          <div class="filters-title catalog-sort-title">
+            <span>Сортировка:</span>
+          </div>
+          <div class="sort-btn-wrapper">
+            <div class="sort-types">
+              <a class="sort-type-btn sort-btn-current" href="#">По цене</a>
+              <a class="sort-type-btn" href="#">По типу</a>
+              <a class="sort-type-btn" href="#">По функционалу</a>
+            </div>
+            <div class="sort-direction">
+              <a class="sort-up-btn sort-direction-btn sort-direction-current" href="#">По возрастанию</a>
+              <a class="sort-down-btn sort-direction-btn" href="#">По убыванию</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <section class="filters">
         <div class="filters-wrapper">
           <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+            <fieldset class="filter-range-price">
+              <legend>Фильтр:</legend>
+              <div class="filter-range">
+                <span class="filter-title">Цена:</span>
+                <div class="range-controls">
+                  <div class="range-controls__scale">
+                    <div class="range-controls__bar" style="width: 60%;"></div>
+                  </div>
+                  <div class="range-controls__toggle range-toggle-min"></div>
+                  <div class="range-controls__toggle range-toggle-max"></div>
+                </div>
+                <div class="price-controls">
+                  <div class="price-min-wrapper">
+                    <label for="price-control-min">От</label>
+                    <input class="price-min" id="price-control-min" type="number" name="range-price-min" value="0">
+                  </div>
+                  <div class="price-max-wrapper">
+                    <label for="price-control-min">До</label>
+                    <input class="price-max" id="price-control-max" type="number" name="range-price-max" value="30000">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
             <fieldset>
               <legend>Производители:</legend>
               <ul>
@@ -162,8 +204,6 @@
         </div>
       </section>
       <section class="catalog">
-        <h2 class="visually-hidden">Список монопадов</h2>
-
         <div class="catalog-items">
           <article class="catalog-item">
             <div class="catalog-item-wrapper">
@@ -244,7 +284,7 @@
               </div>
             </div>
           </article>
-          <article class="catalog-item catalog-item-new">
+          <article class="catalog-item">
             <div class="catalog-item-wrapper">
               <h3 class="catalog-item-title"><a href="">Перфоратор BOSCH BFG 2000</a></h3>
               <span class="catalog-item-price">12500 Р.</span>
@@ -291,7 +331,7 @@
               </div>
             </div>
           </article>
-          <article class="catalog-item catalog-item-new">
+          <article class="catalog-item">
             <div class="catalog-item-wrapper">
               <h3 class="catalog-item-title"><a href="">Перфоратор BOSCH BFG 2000</a></h3>
               <span class="catalog-item-price">12500 Р.</span>
@@ -306,8 +346,30 @@
               </div>
             </div>
           </article>
-
         </div>
+        <div class="catalog-paginator">
+          <ul class="paginator-pages">
+            <li class="paginator-page">
+              <a class="paginator__page-btn paginator__page-number paginator-current" href="#">1</a>
+            </li>
+            <li class="paginator-page">
+              <a class="paginator__page-btn paginator__page-number" href="#">2</a>
+            </li>
+            <li class="paginator-page">
+              <a class="paginator__page-btn paginator__page-number" href="#">3</a>
+            </li>
+          </ul>
+          <a class="paginator__page-btn catalog-paginator__next-btn" href="#next">Вперёд</a>
+        </div>
+      </section>
+
+      <section class="catalog-service">
+        <h2 class="catalog-service__title">Пара слов о перфораторах</h2>
+        <p class="catalog-service__info">
+          Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
+          В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+        </p>
       </section>
     </main>
 
