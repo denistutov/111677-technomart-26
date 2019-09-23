@@ -6,36 +6,44 @@
     <title>HTML Academy: Техномарт</title>
 
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <header class="main-header">
       <div class="top-menu">
-        <div class="main-logo">
-          <a>
-            <img src="img/logo-technomart.svg" width="220" height="47" alt="Логотип Техномарт">
-          </a>
+        <div class="top-menu-row1">
+          <div class="main-logo">
+            <a>
+              <img src="img/logo-technomart.svg" width="220" height="47" alt="Логотип Техномарт">
+            </a>
+          </div>
+
+          <form class="menu-search" action="index.html" method="post">
+            <input type="text" class="menu-search__field" name="search-id" placeholder="Поиск:">
+            <button class="menu-search__btn" type="submit" name="serch-btn">Поиск</button>
+          </form>
+
+          <nav class="client-navigation">
+            <ul class="client-navigation__items">
+              <li class="client-navigation__item">
+                <a href="" class="client-navigation__btn client-navigation__marker">Закладки: <span>0</span></a>
+              </li>
+              <li class="client-navigation__item">
+                <a href="" class="client-navigation__btn client-navigation__cart">Корзина: <span>0</span></a>
+              </li>
+              <li class="client-navigation__item">
+                <a href="" class="client-navigation__btn client-navigation__order">Оформить заказ</a>
+              </li>
+            </ul>
+          </nav>
         </div>
+      </div>
 
-        <form class="menu-search" action="index.html" method="post">
-          <input type="text" class="menu-search__field" name="search-id" placeholder="Поиск:">
-          <button class="menu-search__btn" type="submit" name="serch-btn">Поиск</button>
-        </form>
-
-        <nav class="client-navigation">
-          <ul class="client-navigation__items">
-            <li class="client-navigation__item">
-              <a href="" class="client-navigation__btn client-navigation__marker">Закладки: <span>0</span></a>
-            </li>
-            <li class="client-navigation__item">
-              <a href="" class="client-navigation__btn client-navigation__cart">Корзина <span>0</span></a>
-            </li>
-            <li class="client-navigation__item">
-              <a href="" class="client-navigation__btn client-navigation__order">Оформить заказ</a>
-            </li>
-          </ul>
-        </nav>
-
-        <h1 class="site-descr">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+      <div class="top-menu-row2">
+        <h1 class="site-descr">Интернет-магазин<br>
+          строительных материалов<br>
+          и инструментов для ремонта
+        </h1>
 
         <div class="menu-contacts">
           <a href="tel:+78125550555" class="menu-contacts__tel">+7 (812) 555-05-55</a>
@@ -44,60 +52,61 @@
 
         <nav class="userprofile-nav">
           <a href="" class="menu-userprofile__btn menu-userprofile__login">Войти</a>
-          <a href="" class="menu-userprofile__btn menu-userprofile__login">Регистрация</a>
+          <a href="" class="menu-userprofile__btn menu-userprofile__reg">Регистрация</a>
         </nav>
       </div>
-
-      <nav class="page-navigation">
-        <ul class="page-navigation__items">
-          <li class="page-navigation__item">
-            <a class="page-navigation__btn">Главная</a>
-          </li>
-          <li class="page-navigation__item">
-            <a href="" class="page-navigation__btn">Компания</a>
-          </li>
-          <li class="page-navigation__item">
-            <a href="catalog.html" class="page-navigation__btn">Каталог</a>
-          </li>
-          <li class="page-navigation__item">
-            <a href="" class="page-navigation__btn">Новости</a>
-          </li>
-          <li class="page-navigation__item">
-            <a href="" class="page-navigation__btn">Спецпредложения</a>
-          </li>
-          <li class="page-navigation__item">
-            <a href="" class="page-navigation__btn">Доставка</a>
-          </li>
-          <li class="page-navigation__item">
-            <a href="" class="page-navigation__btn">Контакты</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="top-menu-row3">
+        <nav class="page-navigation">
+          <ul class="page-navigation__items">
+            <li class="page-navigation__item">
+              <a class="page-navigation__btn">Главная</a>
+            </li>
+            <li class="page-navigation__item">
+              <a href="" class="page-navigation__btn">Компания</a>
+            </li>
+            <li class="page-navigation__item">
+              <a href="catalog.html" class="page-navigation__btn">Каталог</a>
+            </li>
+            <li class="page-navigation__item">
+              <a href="" class="page-navigation__btn">Новости</a>
+            </li>
+            <li class="page-navigation__item">
+              <a href="" class="page-navigation__btn">Спецпредложения</a>
+            </li>
+            <li class="page-navigation__item">
+              <a href="" class="page-navigation__btn">Доставка</a>
+            </li>
+            <li class="page-navigation__item">
+              <a href="" class="page-navigation__btn">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
       <section class="main-section offers">
-        <h2 class="offers-title">Предложенрия интернет-магазина</h2>
+        <h2 class="offers-title visually-hidden">Предложенрия интернет-магазина</h2>
         <ul class="offers-items">
           <li class="offers-item  offers-material offers-item-new">
             <h3 class="catalog-item-title">Материалы</h3>
-            <a href="" class="offers-btn">На любой вкус</a>
+            <a href="" class="button offers-btn">На любой вкус</a>
           </li>
           <li class="offers-item offers-instrument">
             <h3 class="catalog-item-title">Инструмент</h3>
-            <a href="" class="offers-btn">На все случаи</a>
+            <a href="" class="button offers-btn">На все случаи</a>
           </li>
           <li class="offers-item offers-tech">
             <h3 class="catalog-item-title">Техника</h3>
-            <a href="" class="offers-btn">Для стройки</a>
+            <a href="" class="button offers-btn">Для стройки</a>
           </li>
           <li class="offers-item offers-dicount">
             <h3 class="catalog-item-title">Скидки 50%</h3>
-            <a href="" class="offers-btn">На 350 товаров</a>
+            <a href="" class="button offers-btn">На 350 товаров</a>
           </li>
           <li class="offers-item offers-delivery">
             <h3 class="catalog-item-title">Доставка</h3>
-            <a href="" class="offers-btn">Бесплатно</a>
+            <a href="" class="button offers-btn">Бесплатно</a>
           </li>
           <li class="page-slider">
             <div class="slider-inner">
@@ -127,8 +136,10 @@
       </section>
 
       <section class="main-section popular">
-        <h2 class="popular-title">Популярные товары магазина.</h2>
-        <a href="" class="button popular-btn">Все популярные товары</a>
+        <div class="section-info popular-info">
+          <h2 class="section-info__title">Популярные товары магазина:</h2>
+          <a href="" class="button section-info-btn">Все популярные товары</a>
+        </div>
 
         <div class="catalog-items">
           <article class="catalog-item">
@@ -142,7 +153,7 @@
               <div class="catalog-item-image__hover">
                 <div class="image-hover-wrapper">
                   <a href="" class="button image-hover-btn" >Купить</a>
-                  <a href="" class="image-hover-btn-compare">В закладки</a>
+                  <a href="" class="button image-hover-btn-compare">В закладки</a>
                 </div>
               </div>
             </div>
@@ -158,7 +169,7 @@
               <div class="catalog-item-image__hover">
                 <div class="image-hover-wrapper">
                   <a href="" class="button image-hover-btn">Купить</a>
-                  <a href="" class="image-hover-btn-compare">В закладки</a>
+                  <a href="" class="button image-hover-btn-compare">В закладки</a>
                 </div>
               </div>
             </div>
@@ -174,7 +185,7 @@
               <div class="catalog-item-image__hover">
                 <div class="image-hover-wrapper">
                   <a href="" class="button image-hover-btn" >Купить</a>
-                  <a href="" class="image-hover-btn-compare">В закладки</a>
+                  <a href="" class="button image-hover-btn-compare">В закладки</a>
                 </div>
               </div>
             </div>
@@ -189,7 +200,7 @@
               <div class="catalog-item-image__hover">
                 <div class="image-hover-wrapper">
                   <a href="" class="button image-hover-btn">Купить</a>
-                  <a href="" class="image-hover-btn-compare">В закладки</a>
+                  <a href="" class="button image-hover-btn-compare">В закладки</a>
                 </div>
               </div>
             </div>
@@ -198,8 +209,10 @@
       </section>
 
       <section class="main-section brands">
-        <h2 class="brands-title">Популярные производители:</h2>
-        <a href="" class="button brands-btn">Все прозводители</a>
+        <div class="section-info brands-info">
+          <h2 class="section-info__title">Популярные производители:</h2>
+          <a href="" class="button section-info-btn">Все прозводители</a>
+        </div>
 
         <ul class="brands-list">
           <li class="brands-logo">
@@ -246,14 +259,16 @@
       </section>
 
       <section class="main-section services">
-        <h2 class="services-title">Сервисы</h2>
-        <p class="services-descr">Хороший интернет-магазин отличается от плохого не только ценами!<br>
-          Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+        <div class="section-info services-info">
+          <h2 class="section-info__title">Сервисы</h2>
+          <p class="services-descr">Хороший интернет-магазин отличается от плохого не только ценами!<br>
+            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
+        </div>
 
         <div class="slider-controls">
-          <button class="button services-btn services-current" type="button">Доставка</button>
-          <button class="button services-btn" type="button">Гарантия</button>
-          <button class="button services-btn" type="button">Кредит</button>
+          <button class="services-btn services-current" type="button">Доставка</button>
+          <button class="services-btn" type="button">Гарантия</button>
+          <button class="services-btn" type="button">Кредит</button>
         </div>
 
         <div class="services-content">
@@ -288,27 +303,32 @@
       </section>
 
       <section class="main-section information">
-        <h2 class="information-title">КОМПАНИЯ «Техномарт»</h2>
-        <div class="information-descr">
-          <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и <br>
-            строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
-            Техномарт работает со многими транспортными компаниями:</p>
+        <div class="section-info">
+          <h2 class="section-info__title information-title">КОМПАНИЯ «Техномарт»</h2>
+          <div class="information-descr">
+            <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и <br>
+              строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.</p>
+            <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+              Техномарт работает со многими транспортными компаниями:</p>
+          </div>
         </div>
+
         <ul class="information-partners">
           <li class="information-partners__item">Деловые Линии</li>
           <li class="information-partners__item">Автотрейдинг</li>
           <li class="information-partners__item">ЖелДорЭкспедиция</li>
         </ul>
         <a href="" class="button about-btn">Подробнее о компании</a>
-        <aside class="contacts">
-          <h2 class="contacts-title">Контакты</h2>
+        <div class="section-info">
+          <h2 class="section-info__title contacts-title">Контакты</h2>
           <p class="contacts-descr">
             Вы можете забрать товар сами,<br>
             заехав в наш офис
           </p>
+        </div>
+        <aside class="contacts">
          <a class="contacts-map">
-           <img src="" width="300" height="160" alt="Карта магазина">
+           <img src="img/contacts-mini-map.png" width="300" height="158" alt="Карта магазина">
          </a>
          <a class="button contacts-btn">Заблудились? Напишите нам!</a>
         </aside>
@@ -316,7 +336,7 @@
     </main>
 
     <footer class="main-footer">
-      <div class="footer-logo">
+      <div class="main-logo main-logo--footer">
         <a>
           <img src="img/logo-technomart.svg" width="220" height="68" alt="Логотип Техномарт">
         </a>
@@ -324,7 +344,7 @@
       <span  class="footer-store-arddress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
          +7 (812) 555-05-55
       </span>
-      <nav class="page-navigation">
+      <nav class="page-navigation page-navigation-footer">
        <ul class="page-navigation__items">
          <li class="page-navigation__item">
            <a href="" class="page-navigation__btn" >Компания</a>
@@ -357,31 +377,33 @@
          </li>
        </ul>
       </nav>
-      <address class="footer-copywrite">
-        © 2010–2019 Компания «Техномарт»<br>
-        Все права защищены
-      </address>
-      <ul class="footer-social">
-        <li>
-          <a href="" class="footer-social-icon">
-            <img src="img/svg/icon-vk.svg" width="42" height="42" alt="VKontakte">Техномарт в VKontakte</a>
-        </li>
-        <li>
-          <a href="" class="footer-social-icon">
-            <img src="img/svg/icon-fb.svg" width="42" height="42" alt="Facebook">Техномарт в Facebook</a>
-        </li>
-        <li>
-          <a href="" class="footer-social-icon">
-            <img src="img/svg/icon-insta.svg" width="42" height="42" alt="Instagram">Техномарт в Instagram</a>
-        </li>
-      </ul>
-      <div class="feedback">
-        <span class="feedback__title">Обратная связь:</span>
-        <a href="mailto:mail@htmlacademy.ru" class="feedback__email">mail@htmlacademy.ru</a>
-      </div>
-      <div class="dev-info">
-        <span class="dev-info__title">Обратная связь:</span>
-        <a href="http://htmlacademy.ru" class="dev-info__email">htmlacademy.ru</a>
+      <div class="footer-bottom">
+        <address class="footer-copywrite">
+          © 2010–2019 Компания «Техномарт»<br>
+          Все права защищены
+        </address>
+        <ul class="footer-social">
+          <li>
+            <a href="" class="footer-social-icon">
+              <img src="img/svg/icon-vk.svg" width="42" height="42" alt="VKontakte">Техномарт в VKontakte</a>
+          </li>
+          <li>
+            <a href="" class="footer-social-icon">
+              <img src="img/svg/icon-fb.svg" width="42" height="42" alt="Facebook">Техномарт в Facebook</a>
+          </li>
+          <li>
+            <a href="" class="footer-social-icon">
+              <img src="img/svg/icon-insta.svg" width="42" height="42" alt="Instagram">Техномарт в Instagram</a>
+          </li>
+        </ul>
+        <div class="feedback">
+          <span class="feedback__title">Обратная связь:</span>
+          <a href="mailto:mail@htmlacademy.ru" class="feedback__email">mail@htmlacademy.ru</a>
+        </div>
+        <div class="dev-info">
+          <span class="dev-info__title">Обратная связь:</span>
+          <a href="http://htmlacademy.ru" class="dev-info__email">htmlacademy.ru</a>
+        </div>
       </div>
     </footer>
 

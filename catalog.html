@@ -1,46 +1,54 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <meta name=viewport content="width=device-width, initial-scale=1.0">
-    <title>HTML Academy: Техномарт</title>
+<head>
+  <meta charset="utf-8">
+  <meta name=viewport content="width=device-width, initial-scale=1.0">
+  <title>HTML Academy: Техномарт</title>
 
-    <link rel="stylesheet" href="css/normalize.css">
-  </head>
-  <body>
-    <header class="main-header">
-      <div class="top-menu">
-        <div class="main-logo">
-          <a href="index.html">
-            <img src="img/logo-technomart.svg" width="220" height="47" alt="Логотип Техномарт">
-          </a>
-        </div>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="main-header">
+  <div class="top-menu">
+    <div class="top-menu-row1">
+      <div class="main-logo">
+        <a>
+          <img src="img/logo-technomart.svg" width="220" height="47" alt="Логотип Техномарт">
+        </a>
+      </div>
 
-        <form class="menu-search" action="index.html" method="post">
-          <input type="text" class="menu-search__field" name="search-id" placeholder="Поиск:">
-          <button class="menu-search__btn" type="submit" name="serch-btn">Поиск</button>
-        </form>
+      <form class="menu-search" action="index.html" method="post">
+        <input type="text" class="menu-search__field" name="search-id" placeholder="Поиск:">
+        <button class="menu-search__btn" type="submit" name="serch-btn">Поиск</button>
+      </form>
 
-        <nav class="client-navigation">
-          <ul class="client-navigation__items">
-            <li class="client-navigation__item">
-              <a href="" class="client-navigation__btn client-navigation__marker">Закладки: <span>0</span></a>
-            </li>
-            <li class="client-navigation__item">
-              <a href="" class="client-navigation__btn client-navigation__cart not-empty">Корзина <span>10</span></a>
-            </li>
-            <li class="client-navigation__item">
-              <a href="" class="client-navigation__btn client-navigation__order">Оформить заказ</a>
-            </li>
-          </ul>
-        </nav>
+      <nav class="client-navigation">
+        <ul class="client-navigation__items">
+          <li class="client-navigation__item">
+            <a href="" class="client-navigation__btn client-navigation__marker">Закладки: <span>0</span></a>
+          </li>
+          <li class="client-navigation__item">
+            <a href="" class="client-navigation__btn client-navigation__cart">Корзина: <span>0</span></a>
+          </li>
+          <li class="client-navigation__item">
+            <a href="" class="client-navigation__btn client-navigation__order">Оформить заказ</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 
-        <h1 class="site-descr">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+  <div class="top-menu-row2">
+    <h1 class="site-descr">Интернет-магазин<br>
+      строительных материалов<br>
+      и инструментов для ремонта
+    </h1>
 
-        <div class="menu-contacts">
-          <a href="tel:+78125550555" class="menu-contacts__tel">+7 (812) 555-05-55</a>
-          <address class="menu-contacts__arddress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
-        </div>
+    <div class="menu-contacts">
+      <a href="tel:+78125550555" class="menu-contacts__tel">+7 (812) 555-05-55</a>
+      <address class="menu-contacts__arddress">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
+    </div>
 
         <nav class="userprofile-nav">
           <a href="" class="menu-userprofile__btn menu-userprofile__login logged-in">Равшан Джамшутович</a>
@@ -55,36 +63,40 @@
         </nav>
       </div>
 
-      <nav class="page-navigation">
-        <ul class="page-navigation__items">
-          <li class="page-navigation__item">
-            <a href="index.html" class="page-navigation__btn">Главная</a>
-          </li>
-          <li class="page-navigation__item">
-            <a href="" class="page-navigation__btn">Компания</a>
-          </li>
-          <li class="page-navigation__item">
-            <a class="page-navigation__btn">Каталог</a>
-          </li>
-          <li class="page-navigation__item">
-            <a href="" class="page-navigation__btn">Новости</a>
-          </li>
-          <li class="page-navigation__item">
-            <a href="" class="page-navigation__btn">Спецпредложения</a>
-          </li>
-          <li class="page-navigation__item">
-            <a href="" class="page-navigation__btn">Доставка</a>
-          </li>
-          <li class="page-navigation__item">
-            <a href="" class="page-navigation__btn">Контакты</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="top-menu-row3">
+        <nav class="page-navigation">
+          <ul class="page-navigation__items">
+            <li class="page-navigation__item">
+              <a class="page-navigation__btn">Главная</a>
+            </li>
+            <li class="page-navigation__item">
+              <a href="" class="page-navigation__btn">Компания</a>
+            </li>
+            <li class="page-navigation__item">
+              <a href="catalog.html" class="page-navigation__btn">Каталог</a>
+            </li>
+            <li class="page-navigation__item">
+              <a href="" class="page-navigation__btn">Новости</a>
+            </li>
+            <li class="page-navigation__item">
+              <a href="" class="page-navigation__btn">Спецпредложения</a>
+            </li>
+            <li class="page-navigation__item">
+              <a href="" class="page-navigation__btn">Доставка</a>
+            </li>
+            <li class="page-navigation__item">
+              <a href="" class="page-navigation__btn">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
       <div class="catalog-title">
-        <h2 class="page-title">Перфораторы</h2>
+        <div class="section-info catalog-title-info">
+          <h2 class="section-info__title">Перфораторы</h2>
+        </div>
         <ul class="breadcrumbs">
           <li><a href="">Каталог</a></li>
           <li><a href="">Инструмент</a></li>
@@ -103,8 +115,8 @@
               <a href="" class="sort-type-btn">По функционалу</a>
             </div>
             <div class="sort-direction">
-              <a href="" class="sort-up-btn sort-direction-btn sort-direction-current">По возрастанию</a>
-              <a href="" class="sort-down-btn sort-direction-btn">По убыванию</a>
+              <a href="" class="sort-direction-btn sort-up-btn sort-direction-current">По возрастанию</a>
+              <a href="" class="sort-direction-btn sort-down-btn">По убыванию</a>
             </div>
           </div>
         </div>
@@ -115,7 +127,7 @@
           <h2 class="visually-hidden">Фильтр товаров</h2>
           <h3 class="visually-hidden">Способ сортировки товаров по диапазону цен.</h3>
           <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-            <fieldset class="filter-range-price">
+            <fieldset class="filter-price filter-price-range">
               <legend>Фильтр:</legend>
               <div class="filter-range">
                 <span class="filter-title">Цена:</span>
@@ -137,9 +149,9 @@
                   </div>
                 </div>
               </div>
-            </fieldset>
+            </fieldset >
             <h3 class="visually-hidden">Способ сортировки товаров по производителю.</h3>
-            <fieldset>
+            <fieldset class="filter-price filter-price-option">
               <legend>Производители:</legend>
               <ul>
                 <li class="filter-option">
@@ -180,7 +192,7 @@
               </ul>
             </fieldset>
             <h3 class="visually-hidden">Способ сортировки товаров по питанию.</h3>
-            <fieldset>
+            <fieldset class="filter-price filter-power">
               <legend>Питание:</legend>
               <ul>
                 <li class="filter-option">
@@ -218,7 +230,7 @@
               <div class="catalog-item-image__hover">
                 <div class="image-hover-wrapper">
                   <a href="" class="button image-hover-btn">Купить</a>
-                  <a href="" class="image-hover-btn-compare">В закладки</a>
+                  <a href="" class="button image-hover-btn-compare">В закладки</a>
                 </div>
               </div>
             </div>
@@ -231,10 +243,10 @@
             </div>
             <div class="catalog-item-image">
               <img src="img/perforator-bfg6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
-              <div class="catalog-item-image__hover">
+              <div class="catalog-item-image_button _hover">
                 <div class="image-hover-wrapper">
                   <a href="" class="button image-hover-btn">Купить</a>
-                  <a href="" class="image-hover-btn-compare">В закладки</a>
+                  <a href="" class="button image-hover-btn-compare">В закладки</a>
                 </div>
               </div>
             </div>
@@ -249,7 +261,7 @@
               <div class="catalog-item-image__hover">
                 <div class="image-hover-wrapper">
                   <a href="" class="button image-hover-btn">Купить</a>
-                  <a href="" class="image-hover-btn-compare">В закладки</a>
+                  <a href="" class="button image-hover-btn-compare">В закладки</a>
                 </div>
               </div>
             </div>
@@ -265,7 +277,7 @@
               <div class="catalog-item-image__hover">
                 <div class="image-hover-wrapper">
                   <a href="" class="button image-hover-btn">Купить</a>
-                  <a href="" class="image-hover-btn-compare">В закладки</a>
+                  <a href="" class="button image-hover-btn-compare">В закладки</a>
                 </div>
               </div>
             </div>
@@ -281,7 +293,7 @@
               <div class="catalog-item-image__hover">
                 <div class="image-hover-wrapper">
                   <a href="" class="button image-hover-btn">Купить</a>
-                  <a href="" class="image-hover-btn-compare">В закладки</a>
+                  <a href="" class="button image-hover-btn-compare">В закладки</a>
                 </div>
               </div>
             </div>
@@ -296,7 +308,7 @@
               <div class="catalog-item-image__hover">
                 <div class="image-hover-wrapper">
                   <a href="" class="button image-hover-btn">Купить</a>
-                  <a href="" class="image-hover-btn-compare">В закладки</a>
+                  <a href="" class="button image-hover-btn-compare">В закладки</a>
                 </div>
               </div>
             </div>
@@ -312,7 +324,7 @@
               <div class="catalog-item-image__hover">
                 <div class="image-hover-wrapper">
                   <a href="" class="button image-hover-btn">Купить</a>
-                  <a href="" class="image-hover-btn-compare">В закладки</a>
+                  <a href="" class="button image-hover-btn-compare">В закладки</a>
                 </div>
               </div>
             </div>
@@ -328,7 +340,7 @@
               <div class="catalog-item-image__hover">
                 <div class="image-hover-wrapper">
                   <a href="" class="button image-hover-btn">Купить</a>
-                  <a href="" class="image-hover-btn-compare">В закладки</a>
+                  <a href="" class="button image-hover-btn-compare">В закладки</a>
                 </div>
               </div>
             </div>
@@ -343,7 +355,7 @@
               <div class="catalog-item-image__hover">
                 <div class="image-hover-wrapper">
                   <a href="" class="button image-hover-btn">Купить</a>
-                  <a href="" class="image-hover-btn-compare">В закладки</a>
+                  <a href="" class="button image-hover-btn-compare">В закладки</a>
                 </div>
               </div>
             </div>
@@ -361,12 +373,12 @@
               <a href="" class="paginator__page-btn paginator__page-number">3</a>
             </li>
           </ul>
-          <a href="" class="paginator__page-btn catalog-paginator__next-btn">Вперёд</a>
+          <a href="" class="paginator__page-btn catalog-paginator__next-btn">Следующая</a>
         </div>
       </section>
 
-      <section class="catalog-service">
-        <h2 class="catalog-service__title">Пара слов о перфораторах</h2>
+      <section class="section-info catalog-service">
+        <h2 class="section-info__title">Пара слов о перфораторах</h2>
         <p class="catalog-service__info">
           Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
           Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
@@ -448,8 +460,8 @@
     <div class="modal cart-item-add">
       <div class="modal-map-wrapper">
         <h2 class="cart-item-add__title">Товар добавлен в корзину</h2>
-        <a  href="" class="cart-item-add__btn">Перейти в корзину</a>
-        <a  href="" class="cart-item-add__btn">Продолжить покупки</a>
+        <a  href="" class="button cart-item-add__btn">Оформить заказ</a>
+        <a  href="" class="button cart-item-back__btn">Продолжить покупки</a>
         <button class="modal-close map-close-btn" type="button">Закрыть</button>
       </div>
     </div>
