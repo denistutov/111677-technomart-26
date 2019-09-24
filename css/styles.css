@@ -16,6 +16,22 @@ html { box-sizing: border-box; }
   border: 0;
 }
 
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* Main button style */
 
 .button {
@@ -25,7 +41,7 @@ html { box-sizing: border-box; }
   background-color: #ee3643;
   color: #ffffff;
 
-  font-family: cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
 
@@ -42,7 +58,9 @@ html { box-sizing: border-box; }
 }
 
 .section-info__title {
-  font-family: cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -56,27 +74,27 @@ html { box-sizing: border-box; }
 /* Fonts */
 
 @font-face {
-  font-family: "cuprum";
+  font-family: "Cuprum";
   src: url("../fonts/cuprum.woff") format("woff"), url("../fonts/cuprum.woff2") format("woff2");
 }
 @font-face {
-  font-family: "cuprum-bold";
+  font-family: "Cuprum bold";
   src: url("../fonts/cuprumbold.woff") format("woff"), url("../fonts/cuprumbold.woff2") format("woff2");
 }
 @font-face {
-  font-family: "cuprum-bold-italic";
+  font-family: "Cuprum bold italic";
   src: url("../fonts/cuprumbolditalic.woff") format("woff"), url("../fonts/cuprumbolditalic.woff2") format("woff2");
 }
 @font-face {
-  font-family: "cuprum-italic";
+  font-family: "Cuprum italic";
   src: url("../fonts/cuprumitalic.woff") format("woff"), url("../fonts/cuprumitalic.woff2") format("woff2");
 }
 @font-face {
-  font-family: "ptsans";
+  font-family: "PT Sans";
   src: url("../fonts/ptsans.woff") format("woff"), url("../fonts/ptsans.woff2") format("woff2");
 }
 @font-face {
-  font-family: "ptsans-bold";
+  font-family: "PT Sans bold";
   src: url("../fonts/ptsansbold.woff") format("woff"), url("../fonts/ptsansbold.woff2") format("woff2");
 }
 
@@ -84,6 +102,24 @@ html { box-sizing: border-box; }
 .main-header {
   font-family: cuprum, Arial, sans-serif;
   background-color: #f3f7f9;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.top-menu-row1,
+.top-menu-row2,
+.top-menu-row3{
+  width: 940px;
+  display: flex;
+  align-items: center;
+}
+
+.top-menu-row1 {
+  position: relative;
+  min-height: 42px;
+  justify-content: flex-end;
 }
 
 .top-menu {
@@ -91,10 +127,65 @@ html { box-sizing: border-box; }
   line-height: 18px;
   color: #ffffff;
   background-color: #293449;
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+}
+
+.main-logo {
+  width: 220px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.menu-search {
+  display: flex;
+  flex-direction: row-reverse;
+
+  width: 270px;
+  height: 42px;
+  position: relative;
+}
+
+.menu-search__field {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  padding-left: 50px;
+
+  color: #ffffff;
+}
+
+.menu-search__field::placeholder {
+  color: #ffffff;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: normal;
+}
+
+.menu-search__btn {
+  position: absolute;
+  left: 15px;
+  top: 12px;
+  font-size: 0;
+  width: 18px;
+  height: 18px;
+  border: none;
+  background: url('../img/svg/icon-search.svg') no-repeat center center;
+  opacity: 0.3;
 }
 
 .client-navigation__items {
+  display: flex;
+  flex-wrap: wrap;
   list-style: none;
+  width: 450px;
+
+  padding: 0;
+  margin: 0;
 }
 
 .client-navigation__btn {
@@ -104,41 +195,121 @@ html { box-sizing: border-box; }
   text-transform: none;
   text-align: center;
   width: 150px;
+  height: 42px;
+  line-height: 42px;
+  padding-left: 15px;
+  margin: 0;
+  position: relative;
+}
+
+.client-navigation__marker::before,
+.client-navigation__cart::before {
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  opacity: 0.3;
+
+  position: absolute;
+}
+
+.client-navigation__marker::before {
+  left: 15px;
+  top: 11px;
+  background: url(../img/svg/icon-bookmark.svg) no-repeat center center;
+}
+
+.client-navigation__cart::before {
+  left: 15px;
+  top: 11px;
+  background: url(../img/svg/icon-cart.svg) no-repeat center center;
 }
 
 .client-navigation__order {
   background-color: #63a63e;
+  padding: 0;
+}
+
+.top-menu-row2 {
+  min-height: 113px;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-top: 45px;
 }
 
 .site-descr {
-  font-family: cuprum-italic, Arial, sans-serif;
+  font-family: "Cuprum italic", "Arial", sans-serif;
   font-size: 16px;
   line-height: 23px;
+  font-weight: normal;
+
+  padding: 3px 0;
+  margin: 0;
 
   color: #ee3643;
+}
+
+.menu-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 70px;
 }
 
 .menu-contacts__tel {
+  display: inline-block;
+
+  width: 270px;
+  height: 45px;
+  padding-left: 20px;
+  margin-bottom: 5px;
+
+  text-align: center;
+  line-height: 40px;
   font-size: 21px;
-  line-height: 21px;
   color: #ee3643;
+
+  box-sizing: border-box;
+  border: 3px solid #ffffff;
+
+  position: relative;
 }
 
-.menu-contacts__address {
+.menu-contacts__tel::before {
+  content: '';
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: url('../img/svg/icon-phone.svg') no-repeat center center;
+}
+
+.menu-contacts__arddress {
+  font-family: "Cuprum", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
+  font-weight: normal;
+  font-style: normal;
   color: #32425c;
 }
 
 .userprofile-nav {
+  width: 300px;
+  text-align: right;
+
   font-size: 21px;
   line-height: 21px;
+
+  margin-left: 50px;
 }
 
 .menu-userprofile__btn {
   display: inline-block;
 
   padding: 12px;
+  margin-left: 5px;
   text-align: center;
   min-height: 45px;
 
@@ -148,6 +319,19 @@ html { box-sizing: border-box; }
 
 .menu-userprofile__login {
   width: 120px;
+  padding-left: 34px;
+  position: relative;
+}
+
+.menu-userprofile__login::before {
+  content: '';
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 13px;
+  left: 13px;
+  background: url('../img/svg/icon-login.svg') no-repeat center center;
 }
 
 .menu-userprofile__reg {
@@ -160,7 +344,9 @@ html { box-sizing: border-box; }
 
 .userprofile-nav__items {
   list-style: none;
-  font-family: cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 16px;
   line-height: 18px;
   color: #32425c;
@@ -168,29 +354,50 @@ html { box-sizing: border-box; }
 }
 
 .page-navigation {
-  background-color: #293449;
-  font-family: cuprum, Arial, sans-serif;;
+  background-color: #32425c;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 17px;
-  line-height: 17px;
+  min-height: 55px;
+  box-shadow: 0 5px 0 rgba(41, 52, 73, 1);
 }
 
 .page-navigation__items {
+  width: 940px;
+  min-height: 55px;
   list-style: none;
+  margin: 0;
+  padding: 0 22px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
 }
 
 .page-navigation__btn {
+  display: inline-block;
   text-decoration: none;
+  line-height: 55px;
   color: #ffffff;
+  height: 55px;
+  padding: 0 30px;
+  margin: 0;
 }
 /* Header end */
 
 /* Main sections start*/
 /* Breadcrumbs */
+.catalog-title-info .section-info__title{
+  background-color: #f2f6f8;
+}
+
 .breadcrumbs {
   list-style: none;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: ptsans, Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -201,16 +408,18 @@ html { box-sizing: border-box; }
 /* Breadcrumbs end*/
 
 /* Catalog sort menu */
-.catalog-sort-menu {
+
+.catalog-sort-menu,
+.catalog-sort-title  {
   background-color: #f7f3ec;
-  font-family: ptsans, Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
 }
 
 .catalog-sort-title {
-  color: #000000;
+  font-weight: normal;
 }
 
 .sort-type-btn {
@@ -231,17 +440,27 @@ html { box-sizing: border-box; }
   text-transform: uppercase;
   color: #000000;
 }
+
+.filter-title {
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.filter-price .filter-title {
+  background-color: #f7f3ec;
+}
+
 .filter-price {
-  font-family: ptsans, Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 17px;
   line-height: 18px;
   border: none;
 }
 
-.filter-title {
-  font-family: ptsans-bold, Arial, sans-serif;
-  font-size: 17px;
-  line-height: 30px;
+.filter-range-title{
+  font-family: "PT Sans bold", "Arial", sans-serif;
 }
 
 .filter-price-option ul,
@@ -268,11 +487,11 @@ html { box-sizing: border-box; }
   background-color: #32425c;
 }
 
-.catalog-item-title {
-  font-family: cuprum-bold, Arial, sans-serif;
+.offers-item-title {
+  font-family: "Cuprum bold", "Arial", sans-serif;
   font-size: 24px;
   line-height: 30px;
-
+  font-style: normal;
   color: #ffffff;
 }
 
@@ -308,13 +527,16 @@ html { box-sizing: border-box; }
 }
 
 .slider-title {
-  font-family: cuprum-bold, Arial, sans-serif;
+  font-family: "Cuprum bold", "Arial", sans-serif;
   font-size: 36px;
   line-height: 36px;
+  text-transform: uppercase;
 }
 
 .slider-descr {
-  font-family: cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 18px;
   line-height: 24px;
 }
@@ -331,7 +553,7 @@ html { box-sizing: border-box; }
 }
 
 .catalog-item-title {
-  font-family: ptsans-bold, Arial, sans-serif;
+  font-family: "PT Sans bold", "Arial", sans-serif;
   font-size: 18px;
   line-height: 20px;
   color: #000000;
@@ -408,7 +630,7 @@ html { box-sizing: border-box; }
 }
 
 .services-descr {
-  font-family: ptsans, Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: #000000;
@@ -427,7 +649,7 @@ html { box-sizing: border-box; }
   cursor: pointer;
 
   text-decoration: none;
-  font-family: cuprum-bold, Arial, sans-serif;
+  font-family: "Cuprum bold", "Arial", sans-serif;
   font-size: 21px;
   line-height: 30px;
 }
@@ -438,7 +660,9 @@ html { box-sizing: border-box; }
 }
 
 .services-title {
-  font-family: cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 36px;
   line-height: 36px;
   color: #32425c;
@@ -446,7 +670,9 @@ html { box-sizing: border-box; }
 }
 
 .services-descr {
-  font-family: ptsans, Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 13px;
   line-height: 24px;
   color: #000000;
@@ -463,21 +689,23 @@ html { box-sizing: border-box; }
   background-color: #ffffff;
 }
 
-.section-info__title .information-title,
-.section-info__title .contacts-title {
+.information-title,
+.contacts-title {
   color: #000000;
 }
 
 .information-descr,
 . contacts-descr {
-  font-family: ptsans, Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: #000000;
 }
 
 .information-partners__item {
-  font-family: cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 18px;
   line-height: 20px;
   list-style: none;
@@ -513,12 +741,12 @@ html { box-sizing: border-box; }
   background-color: #f2f6f8;
 }
 
-.section-info__title {
+.catalog-service .section-info__title {
   color: #000000;
 }
 
 .catalog-service__info {
-  font-family: ptsans, Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
 }
@@ -530,7 +758,9 @@ html { box-sizing: border-box; }
 .main-footer {
   background-color: #32425c;
   color: #ffffff;
-  font-family: cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .footer-store-arddress {
@@ -585,13 +815,15 @@ html { box-sizing: border-box; }
 }
 
 .form-field-title {
-  font-family: cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 18px;
   line-height: 18px;
 }
 
 .form-write-field {
-  font-family: ptsans, Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
   line-height: 18px;
   padding: 12px 14px;
@@ -612,7 +844,9 @@ html { box-sizing: border-box; }
 
 /* Modal popup "add to cart" */
 .cart-item-add__title {
-  font-family: cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 30px;
   line-height: 30px;
 }
