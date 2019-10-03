@@ -499,6 +499,10 @@ input[type="radio"].visually-hidden {
   align-content: center;
 }
 
+.page-navigation__item:hover {
+  background-color: #293449;
+}
+
 .page-navigation__btn {
   display: inline-block;
   text-decoration: none;
@@ -586,6 +590,7 @@ input[type="radio"].visually-hidden {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 18px;
 }
 
 .catalog-sort-title {
@@ -614,10 +619,11 @@ input[type="radio"].visually-hidden {
 
 .catalog-content-wrapper {
   display: flex;
+  justify-content: space-between;
 }
 
 .catalog {
-  width: 100%;
+  width: 700px;
   display: flex;
   flex-direction: column;
 }
@@ -635,6 +641,7 @@ input[type="radio"].visually-hidden {
 
 /* Filters section */
 .filter {
+  width: 220px;
   text-transform: uppercase;
   color: #000000;
 }
@@ -712,20 +719,11 @@ input[type="radio"].visually-hidden {
   width: 300px;
   height: 124px;
   background-color: #32425c;
-  padding: 21px 26px 23px 24px;
+  padding: 21px 26px 23px 23px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-}
-
-.offers-item::after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
 }
 
 .offers-item-title {
@@ -744,48 +742,32 @@ input[type="radio"].visually-hidden {
 }
 
 .offers-material {
+  background: url('../img/svg/icon-1.svg') no-repeat right 43px top 31px;
   background-color: #ffbf47;
 }
 
-.offers-material::after {
-  background: url('../img/svg/icon-1.svg') no-repeat center center;
-  width: 130px;
-}
-
 .offers-instrument {
+  background: url('../img/svg/icon-2.svg') no-repeat right 28px top 33px;
   background-color: #3bbce3;
-}
 
-.offers-instrument::after {
-  background: url('../img/svg/icon-2.svg') no-repeat center center;
-  width: 130px;
 }
 
 .offers-tech {
+  background: url('../img/svg/icon-3.svg') no-repeat right 31px top 31px;
   background-color: #dc91d8;
-}
 
-.offers-tech::after {
-  background: url('../img/svg/icon-3.svg') no-repeat center center;
-  width: 140px;
 }
 
 .offers-dicount {
+  background: url('../img/svg/icon-4.svg') no-repeat right 45px top 26px;
   background-color: #8ed78f;
-}
 
-.offers-dicount::after {
-  background: url('../img/svg/icon-4.svg') no-repeat center center;
-  width: 150px;
 }
 
 .offers-delivery {
+  background: url('../img/svg/icon-5.svg') no-repeat right 31px top 33px;
   background-color: #ffc047;
-}
 
-.offers-delivery::after {
-  background: url('../img/svg/icon-5.svg') no-repeat center center;
-  width: 140px;
 }
 
 /* Slider start */
@@ -887,7 +869,7 @@ input[type="radio"].visually-hidden {
 
 .catalog-item-price {
   display: inline-block;
-  width: 132px;
+  width: 141px;
   height: 40px;
 
   font-family: "PT Sans bold", "Arial", sans-serif;
@@ -896,12 +878,14 @@ input[type="radio"].visually-hidden {
   text-align: center;
 
   color: #ffffff;
-  background-color: #ee3643;
-  border-radius: 2px;
-  padding: 12px;
+  background: url('../img/svg/red-button.svg') no-repeat left center;
+  padding: 12px 6px 0 0;
+  margin-left: 8px;
 
   position: relative;
 }
+
+/*
 
 .catalog-item-price::after {
   content: '';
@@ -912,6 +896,8 @@ input[type="radio"].visually-hidden {
   border: 20px solid;
   border-color: #ffffff #ffffff #ffffff #ee3643;
 }
+
+*/
 
 .catalog-item-old-price {
   font-family: "PT Sans bold", "Arial", sans-serif;
@@ -927,8 +913,10 @@ input[type="radio"].visually-hidden {
 
 .image-hover-btn {
   width: 135px;
+  height: 35px;
   background-color: #63a63e;
-  margin-bottom: 10px;
+  margin: 10px;
+  padding: 12px 0 0 4px;
   box-shadow: 0 3px 0 rgba(54, 115, 21, 1);
   position: relative;
 }
@@ -947,7 +935,8 @@ input[type="radio"].visually-hidden {
 
 .image-hover-btn-compare {
   width: 135px;
-  padding: 9px;
+  padding: 9px 0 0 4px;
+  margin-top: 1px;
   background-color: #ffffff;
   border: 3px solid #63a63e;
   color: #32425c;
@@ -993,11 +982,6 @@ input[type="radio"].visually-hidden {
 .catalog .catalog-item {
   margin-bottom: 20px;
 }
-
-.catalog .catalog-items {
-  margin-top: 20px;
-}
-
 /* Popular section end*/
 
 /* Brands section*/
