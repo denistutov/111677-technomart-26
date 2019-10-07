@@ -113,67 +113,69 @@
               <fieldset class="filter-price filter-price-range">
                 <legend class="filter-title">Фильтр:</legend>
                 <div class="filter-range">
-                  <span class="filter-range-title">Цена:</span>
+                  <h4 class="filter-range-title">Цена:</h4>
                   <div class="range-controls">
                     <div class="range-controls__scale">
                       <div class="range-controls__bar"></div>
+                      <button class="range-controls__toggle range-toggle-min"></button>
+                      <button class="range-controls__toggle range-toggle-max"></button>
                     </div>
-                    <button class="range-controls__toggle range-toggle-min"></button>
-                    <button class="range-controls__toggle range-toggle-max"></button>
                   </div>
                   <div class="price-controls">
-                    <div class="price-min-wrapper">
-                      <label for="price-control-min">От</label>
+                    <div class="price-controls__field">
                       <input class="price-min" id="price-control-min" type="number" name="range-price-min" value="0">
                     </div>
-                    <div class="price-max-wrapper">
-                      <label for="price-control-min">До</label>
+                    <div class="price-controls__field">
                       <input class="price-max" id="price-control-max" type="number" name="range-price-max" value="30000">
                     </div>
                   </div>
                 </div>
               </fieldset >
-              <h3 class="visually-hidden">Способ сортировки товаров по производителю.</h3>
-              <fieldset class="filter-price filter-price-option">
-                <legend>Производители:</legend>
-                <ul>
-                  <li class="filter-option">
-                    <label class="filter-input-title">
-                      <input class="filter-input filter-input-checkbox" type="checkbox" name="technomart-brand-bosch" value="brand-bosch" checked>
-                      <span class="checkbox-indicator"></span>
-                      Bosch
-                    </label>
-                  </li>
-                  <li class="filter-option">
-                    <label class="filter-input-title">
-                      <input class="filter-input filter-input-checkbox" type="checkbox" name="technomart-brand-interskol" value="brand-interskol">
-                      <span class="checkbox-indicator"></span>
-                      Интерскол
-                    </label>
-                  </li>
-                  <li class="filter-option">
-                    <label class="filter-input-title">
-                      <input class="filter-input filter-input-checkbox" type="checkbox" name="technomart-brand-makita" value="brand-makita" checked>
-                      <span class="checkbox-indicator"></span>
-                      Makita
-                    </label>
-                  </li>
-                  <li class="filter-option">
-                    <label class="filter-input-title">
-                      <input class="filter-input filter-input-checkbox" type="checkbox" name="technomart-brand-dewalt" value="brand-dewalt">
-                      <span class="checkbox-indicator"></span>
-                      Dewalt
-                    </label>
-                  </li>
-                  <li class="filter-option">
-                    <label class="filter-input-title">
-                      <input class="filter-input filter-input-checkbox" type="checkbox" name="technomart-brand-hitachi" value="brand-hitachi">
-                      <span class="checkbox-indicator"></span>
-                      Hitachi
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
+
+              <div class="filter-price-option">
+                <h3 class="visually-hidden">Способ сортировки товаров по производителю.</h3>
+                <fieldset class="filter-price">
+                  <legend>Производители:</legend>
+                  <ul>
+                    <li class="filter-option">
+                      <label class="filter-input-title">
+                        <input class="filter-input filter-input-checkbox" type="checkbox" name="technomart-brand-bosch" value="brand-bosch" checked>
+                        <span class="checkbox-indicator"></span>
+                        Bosch
+                      </label>
+                    </li>
+                    <li class="filter-option">
+                      <label class="filter-input-title">
+                        <input class="filter-input filter-input-checkbox" type="checkbox" name="technomart-brand-interskol" value="brand-interskol">
+                        <span class="checkbox-indicator"></span>
+                        Интерскол
+                      </label>
+                    </li>
+                    <li class="filter-option">
+                      <label class="filter-input-title">
+                        <input class="filter-input filter-input-checkbox" type="checkbox" name="technomart-brand-makita" value="brand-makita" checked>
+                        <span class="checkbox-indicator"></span>
+                        Makita
+                      </label>
+                    </li>
+                    <li class="filter-option">
+                      <label class="filter-input-title">
+                        <input class="filter-input filter-input-checkbox" type="checkbox" name="technomart-brand-dewalt" value="brand-dewalt">
+                        <span class="checkbox-indicator"></span>
+                        Dewalt
+                      </label>
+                    </li>
+                    <li class="filter-option">
+                      <label class="filter-input-title">
+                        <input class="filter-input filter-input-checkbox" type="checkbox" name="technomart-brand-hitachi" value="brand-hitachi">
+                        <span class="checkbox-indicator"></span>
+                        Hitachi
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+
               <h3 class="visually-hidden">Способ сортировки товаров по питанию.</h3>
               <fieldset class="filter-price filter-power">
                 <legend>Питание:</legend>
@@ -211,8 +213,18 @@
                 <a href="" class="sort-type-btn">По функционалу</a>
               </div>
               <div class="sort-direction">
-                <a href="" class="sort-direction-btn sort-up-btn sort-direction-current">По возрастанию</a>
-                <a href="" class="sort-direction-btn sort-down-btn">По убыванию</a>
+                <a href="" class="sort-direction-btn sort-up-btn sort-direction-current">
+                  По возрастанию
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                    <path fill="#231F20" d="M5.5 0L0 10h11z"/>
+                  </svg>
+                </a>
+                <a href="" class="sort-direction-btn sort-down-btn">
+                  По убыванию
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                    <path fill="#231F20" d="M5.5 10L0 0h11"/>
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
@@ -329,13 +341,13 @@
           <div class="catalog-paginator">
             <ul class="paginator-pages">
               <li class="paginator-page">
-                <a class="paginator__page-btn paginator__page-number">1</a>
+                <a class="paginator__page-btn paginator__page-btn--current">1</a>
               </li>
               <li class="paginator-page">
-                <a href="" class="paginator__page-btn paginator__page-number">2</a>
+                <a href="" class="paginator__page-btn">2</a>
               </li>
               <li class="paginator-page">
-                <a href="" class="paginator__page-btn paginator__page-number">3</a>
+                <a href="" class="paginator__page-btn">3</a>
               </li>
               <li class="paginator-page">
                 <a href="" class="paginator__page-btn catalog-paginator__next-btn">Следующая</a>
