@@ -112,31 +112,41 @@
               <a href="" class="button offers-btn">Бесплатно</a>
             </div>
           </div>
-          <div class="page-slider">
-            <div class="slider-inner">
-              <div class="slider-block slider-1">
-                <div class="slider-content">
-                  <div class="slider-desc">
-                    <h3 class="slider-title">Дрели</h3>
-                    <p class="slider-text">Соседям на радость!</p>
-                  </div>
-                  <a href="" class="button slider-btn">Открыть каталог</a>
-                </div>
-                <div class="slider-image">
-                  <img class="slider-image__image" src="img/slider-1.jpg" width="620" height="266" alt="Дрели">
-                </div>
+          <div class="offers-slider">
+             <div class="offers-slider-inner">
+              <div class="offers-slider-controls">
+                  <button class="offers-controls__btn controls__left-btn"></button>
+                  <ul class="offers-slider-dots">
+                      <li class="offers-slider-dot dot-current"></li>
+                      <li class="offers-slider-dot"></li>
+                  </ul>
+                  <button class="offers-controls__btn controls__right-btn"></button>
               </div>
-              <div class="slider-block slider-2">
-                <div class="slider-content">
-                  <div class="slider-desc">
-                    <h3 class="slider-title">Перфораторы</h3>
-                    <p class="slider-text">Настоящие мужские игрушки</p>
+              <div class="offers-slider-wrapper">
+                <div class="slider-block slider-1">
+                    <div class="slider-content">
+                      <div class="slider-desc">
+                        <h3 class="slider-title">Дрели</h3>
+                        <p class="slider-text">Соседям на радость!</p>
+                      </div>
+                      <a href="" class="button slider-btn">Открыть каталог</a>
+                    </div>
+                    <div class="slider-image">
+                      <img class="slider-image__image" src="img/slider-1.jpg" width="620" height="266" alt="Дрели">
+                    </div>
                   </div>
-                  <a href="" class="button slider-btn">Открыть каталог</a>
-                </div>
-                <div class="slider-image">
-                  <img class="slider-image__image" src="img/slider-2.jpg" width="620" height="266" alt="Перфораторы">
-                </div>
+                  <div class="slider-block slider-2">
+                    <div class="slider-content">
+                      <div class="slider-desc">
+                        <h3 class="slider-title">Перфораторы</h3>
+                        <p class="slider-text">Настоящие мужские игрушки</p>
+                      </div>
+                      <a href="" class="button slider-btn">Открыть каталог</a>
+                    </div>
+                    <div class="slider-image">
+                      <img class="slider-image__image" src="img/slider-2.jpg" width="620" height="266" alt="Перфораторы">
+                    </div>
+                  </div>
               </div>
             </div>
           </div>
@@ -319,7 +329,7 @@
             Вы можете забрать товар сами,<br>
             заехав в наш офис
           </p>
-          <a href="" class="contacts-map">
+          <a href="img/contacts-map.png" class="contacts-map">
             <img src="img/contacts-mini-map.png" width="300" height="158" alt="Карта магазина">
           </a>
           <a href="" class="button contacts-btn">Заблудились? Напишите нам!</a>
@@ -440,6 +450,19 @@
         <button class="modal-close map-close-btn" type="button">Закрыть</button>
       </div>
     </div>
+
+    <div class="modal cart-item-add">
+        <div class="modal-cart-wrapper">
+          <h2 class="cart-item-add__title">Товар добавлен в корзину!</h2>
+          <div class="cart-btn-wrapper">
+              <a  href="" class="button cart-item-add__btn">Оформить заказ</a>
+              <a  href="" class="button cart-item-back__btn">Продолжить покупки</a>
+          </div>
+          <button class="modal-close cart-close-btn" type="button">Закрыть</button>
+        </div>
+      </div>
+
+    <script src="js/scripts.js"></script>
 
   </body>
 </html>
