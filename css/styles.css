@@ -224,7 +224,7 @@ input[type="radio"].visually-hidden {
 
 /* Header start */
 .main-header {
-  font-family: cuprum, Arial, sans-serif;
+  font-family: "Cuprum", "Arial", sans-serif;
   background-color: #f3f7f9;
   min-height: 320px;
   display: -webkit-box;
@@ -1169,6 +1169,11 @@ input[type="radio"].visually-hidden {
   font-size: 15px;
   line-height: 20px;
   font-weight: 500;
+  opacity: 0.78;
+}
+
+.filter-input-title:hover {
+  opacity: 1;
 }
 
 .checkbox-indicator,
@@ -1260,6 +1265,7 @@ input[type="radio"].visually-hidden {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .offers-row1 {
@@ -1875,10 +1881,12 @@ input[type="radio"].visually-hidden {
 
   background-color: #32425c;
   color: #ffffff;
+  border: none;
+  border-bottom: 1px solid #293449;
+  border-top: 1px solid #405069;
 
   text-align: left;
   padding-left: 22px;
-  border: none;
   cursor: pointer;
 
   text-decoration: none;
@@ -1897,6 +1905,7 @@ input[type="radio"].visually-hidden {
 .services-current:hover {
   background-color: #ffffff;
   color: #32425c;
+  border: none;
 }
 
 .services-title {

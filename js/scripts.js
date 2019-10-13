@@ -67,20 +67,63 @@ var closeCatalogBuyForm = document.querySelector('.cart-close-btn');
 var catalogBuyButtons = document.querySelectorAll('.image-hover-btn');
 var continueShoppingBtn = document.querySelector('.cart-item-back__btn');
 
-console.log(catalogBuyButtons);
-
-// catalogBuyButtons.forEach(function (btn) {
-//   btn.addEventListener('click', function (evt) {
-//     evt.preventDefault();
-//     openCatalogBuyForm.classList.add('modal-show');
-//   });
-// });
-
-
 closeCatalogBuyForm.addEventListener('click', function () {
   openCatalogBuyForm.classList.remove('modal-show');
 });
 
 continueShoppingBtn.addEventListener('click', function () {
   openCatalogBuyForm.classList.remove('modal-show');
+});
+
+// Slider offer
+
+var sliderArray = document.querySelectorAll('.slider-block');
+var sliderWrapper = document.querySelector('.offers-slider-wrapper');
+var sliderMoveRightButton = document.querySelector('.controls__right-btn');
+var sliderMoveLeftButton = document.querySelector('.controls__left-btn');
+var sliderDots = document.querySelectorAll('.offers-slider-dot');
+var moveDistance = 270;
+var currentSlidePosition = 0;
+var sliderCounter = 1;
+
+var slideCount = sliderArray.length;
+
+var moveSlider = function (distance) {
+  return sliderWrapper.style.transform = 'translateY(' + distance +'px)';
+};
+
+var makeDefaultDot = function (number) {
+  --number;
+  sliderDots[number].classList.remove('dot-current');
+};
+
+var makeCurrentDot = function (number) {
+  --number;
+  sliderDots[number].classList.add('dot-current');
+};
+
+sliderMoveRightButton.addEventListener('click', function (evt) {
+  if (slideCount > sliderCounter) {
+    currentSlidePosition -= moveDistance;
+    moveSlider(currentSlidePosition);
+    makeDefaultDot(sliderCounter);
+    ++sliderCounter;
+    makeCurrentDot(sliderCounter);
+  } else {
+    evt.preventDefault();
+  }
+  console.log(sliderCounter);
+});
+
+sliderMoveLeftButton.addEventListener('click', function (evt) {
+  if (sliderCounter > 1) {
+    currentSlidePosition += moveDistance;
+    moveSlider(currentSlidePosition);
+    makeDefaultDot(sliderCounter);
+    --sliderCounter;
+    makeCurrentDot(sliderCounter);
+  } else {
+    evt.preventDefault();
+  }
+  console.log(sliderCounter);
 });
