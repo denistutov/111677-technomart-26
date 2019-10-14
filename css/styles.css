@@ -2123,11 +2123,12 @@ input[type="radio"].visually-hidden {
 }
 
 .paginator__page-btn {
-  display: block;
+  display: inline-block;
   height: 38px;
   width: 38px;
 
   text-transform: uppercase;
+  text-align: left;
   text-decoration: none;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 13px;
@@ -2248,7 +2249,8 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-store-arddress {
-  display: block;
+  display: inline-block;
+  text-align: left;
   max-width: 322px;
   font-family: "Cuprum", "Arial", sans-serif;
   font-weight: 400;
