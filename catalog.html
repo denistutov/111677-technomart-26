@@ -6,7 +6,7 @@
   <title>HTML Academy: Техномарт</title>
 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles-min.css">
 </head>
 <body>
   <header class="main-header">
@@ -51,7 +51,10 @@
       </div>
 
         <nav class="userprofile-nav logged-in">
-          <a href="" class="menu-userprofile__btn menu-userprofile__login menu-userprofile__login--logged-in">Равшан Джамшутович</a>
+          <div class="menu-userprofile">
+            <a href="" class="menu-userprofile__btn menu-userprofile__login menu-userprofile__login--logged-in">Равшан Джамшутович</a>
+            <a href="" class="menu-userprofile__btn menu-userprofile__logoff"></a>
+          </div>
           <ul class="userprofile-nav__items">
             <li class="userprofile-nav__item">
               <a href="" class="userprofile-nav__btn">Мои заказы</a>
@@ -141,35 +144,35 @@
                       <label class="filter-input-title">
                         <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="technomart-brand-bosch" value="brand-bosch" checked>
                         <span class="checkbox-indicator"></span>
-                        Bosch
+                        <span class="filter-text">Bosch</span>
                       </label>
                     </li>
                     <li class="filter-option">
                       <label class="filter-input-title">
                         <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="technomart-brand-interskol" value="brand-interskol">
                         <span class="checkbox-indicator"></span>
-                        Интерскол
+                        <span class="filter-text"></span>Интерскол
                       </label>
                     </li>
                     <li class="filter-option">
                       <label class="filter-input-title">
                         <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="technomart-brand-makita" value="brand-makita" checked>
                         <span class="checkbox-indicator"></span>
-                        Makita
+                        <span class="filter-text"></span>Makita
                       </label>
                     </li>
                     <li class="filter-option">
                       <label class="filter-input-title">
                         <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="technomart-brand-dewalt" value="brand-dewalt">
                         <span class="checkbox-indicator"></span>
-                        Dewalt
+                        <span class="filter-text">Dewalt</span>
                       </label>
                     </li>
                     <li class="filter-option">
                       <label class="filter-input-title">
                         <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="technomart-brand-hitachi" value="brand-hitachi">
                         <span class="checkbox-indicator"></span>
-                        Hitachi
+                        <span class="filter-text">Hitachi</span>
                       </label>
                     </li>
                   </ul>
@@ -184,14 +187,14 @@
                     <label class="filter-input-title">
                       <input class="filter-input filter-input-radio visually-hidden" type="radio" name="power-type" value="without-battery" checked>
                       <span class="radio-indicator"></span>
-                      Аккумуляторные
+                      <span class="filter-text">Аккумуляторные</span>
                     </label>
                   </li>
                   <li class="filter-option">
                     <label class="filter-input-title">
                       <input class="filter-input filter-input-radio visually-hidden" type="radio" name="power-type" value="with-battery">
                       <span class="radio-indicator"></span>
-                      Сетевые
+                      <span class="filter-text">Сетевые</span>
                     </label>
                   </li>
                 </ul>
@@ -460,6 +463,6 @@
       </div>
     </div>
 
-    <script src="js/scripts.js"></script>
+    <script src="js/cart-form-min.js"></script>
   </body>
 </html>
