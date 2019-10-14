@@ -6,6 +6,21 @@ var closeWriteForm = document.querySelector('.write-close-btn');
 var userNameField = document.querySelector('#user-name');
 var emailField = document.querySelector('#user-email');
 
+var KEYCODE_ESC = 27;
+
+window.addEventListener('keydown', function (evt) {
+  if (evt.keyCode === KEYCODE_ESC) {
+    if (popupWriteForm.classList.contains('modal-show')) {
+      evt.preventDefault();
+      popupWriteForm.classList.remove('modal-show');
+    }
+    if (popupMap.classList.contains('modal-show')) {
+      evt.preventDefault();
+      popupMap.classList.remove('modal-show');
+    }
+  }
+});
+
 openWriteForm.addEventListener('click', function (evt) {
   evt.preventDefault();
   popupWriteForm.classList.add('modal-show');
@@ -25,23 +40,34 @@ closeWriteForm.addEventListener('click', function (evt) {
   popupWriteForm.classList.remove('modal-error');
 });
 
+popupWriteForm.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  popupWriteForm.classList.remove('modal-show');
+  popupWriteForm.classList.remove('modal-error');
+});
+
 // Contacts map modal
 
 var openMap = document.querySelector('.contacts-map');
 var closeMap = document.querySelector('.map-close-btn');
 var popupMap = document.querySelector('.modal-map');
 
-  openMap.addEventListener('click', function (evt) {
-    evt.preventDefault(evt);
-    popupMap.classList.add('modal-show');
+openMap.addEventListener('click', function (evt) {
+  evt.preventDefault(evt);
+  popupMap.classList.add('modal-show');
 });
 
-  closeMap.addEventListener('click', function (evt) {
-    evt.preventDefault(evt);
-    popupMap.classList.remove('modal-show');
+closeMap.addEventListener('click', function (evt) {
+  evt.preventDefault(evt);
+  popupMap.classList.remove('modal-show');
 });
 
-// services slider
+popupMap.addEventListener('click', function (evt) {
+  evt.preventDefault(evt);
+  popupMap.classList.remove('modal-show');
+});
+
+// Services slider
 
 var servicesButtons = Array.prototype.slice.call(document.querySelectorAll('.services-btn'));
 var services = document.querySelector('.services-content');
@@ -60,27 +86,54 @@ servicesButtons.forEach(function (button, i) {
   });
 });
 
-// Modal add to cart
+// Slider offer
 
-var openCatalogBuyForm = document.querySelector('.cart-item-add');
-var closeCatalogBuyForm = document.querySelector('.cart-close-btn');
-var catalogBuyButtons = document.querySelectorAll('.image-hover-btn');
-var continueShoppingBtn = document.querySelector('.cart-item-back__btn');
+var sliderArray = document.querySelectorAll('.slider-block');
+var sliderMoveRightButton = document.querySelector('.controls__right-btn');
+var sliderMoveLeftButton = document.querySelector('.controls__left-btn');
+var sliderDots = document.querySelectorAll('.offers-slider-dot');
 
-console.log(catalogBuyButtons);
+var sliderCounter = 0;
+var slideCount = sliderArray.length;
 
-// catalogBuyButtons.forEach(function (btn) {
-//   btn.addEventListener('click', function (evt) {
-//     evt.preventDefault();
-//     openCatalogBuyForm.classList.add('modal-show');
-//   });
-// });
+var makeDefaultDot = function (number) {
+  sliderDots[number].classList.remove('dot-current');
+};
 
+var makeCurrentDot = function (number) {
+  sliderDots[number].classList.add('dot-current');
+};
 
-closeCatalogBuyForm.addEventListener('click', function () {
-  openCatalogBuyForm.classList.remove('modal-show');
+var showNextSLide = function (number) {
+  sliderArray[number].classList.add('visually-hidden');
+  ++number;
+  sliderArray[number].classList.remove('visually-hidden');
+};
+
+var showPreviousSLide = function (number) {
+  sliderArray[number].classList.add('visually-hidden');
+  --number;
+  sliderArray[number].classList.remove('visually-hidden');
+};
+
+sliderMoveRightButton.addEventListener('click', function (evt) {
+  if (slideCount > sliderCounter + 1) {
+    showNextSLide(sliderCounter);
+    makeDefaultDot(sliderCounter);
+    ++sliderCounter;
+    makeCurrentDot(sliderCounter);
+  } else {
+    evt.preventDefault();
+  }
 });
 
-continueShoppingBtn.addEventListener('click', function () {
-  openCatalogBuyForm.classList.remove('modal-show');
+sliderMoveLeftButton.addEventListener('click', function (evt) {
+  if (sliderCounter > 0) {
+    showPreviousSLide(sliderCounter);
+    makeDefaultDot(sliderCounter);
+    --sliderCounter;
+    makeCurrentDot(sliderCounter);
+  } else {
+    evt.preventDefault();
+  }
 });
